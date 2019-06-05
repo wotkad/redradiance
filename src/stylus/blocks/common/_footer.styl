@@ -1,0 +1,302 @@
+#footer
+	background $text
+.footer
+	display flex
+	flex-wrap wrap
+	padding 40px 0
+	overflow hidden
+	height 282px
+	&-active
+		height auto
+		.footer__container
+			.footer__block
+				&:not(:nth-child(1))
+					display block
+			&:nth-child(4)
+				.footer__block
+					&-link
+						&:nth-last-child(1),
+						&:nth-last-child(2),
+						&:nth-last-child(3)
+							display block
+	&__container
+		flex-basis 20%
+		&:nth-child(4)
+			.footer__block
+				&-link
+					&:nth-last-child(1),
+					&:nth-last-child(2),
+					&:nth-last-child(3)
+						display none
+		.footer__block
+			padding-right 25px
+			margin-bottom 30px
+			&:not(:nth-child(1))
+				display none
+			&-title
+				flex-basis 100%
+				font-family $Bold
+				font-size 0.825rem
+				line-height 19px
+				color $white
+				margin-bottom 15px
+			&-link
+				flex-basis 100%
+				font-family $Regular
+				font-size 0.75rem
+				line-height 19px
+				display block
+				margin-bottom 7px
+				& a
+					color $white
+					display inline-block
+					transition .3s
+					&:hover
+						color $red
+			&-text
+				flex-basis 100%
+				font-family $Regular
+				font-size 0.75rem
+				line-height 20px
+				position relative
+				margin-bottom 7px
+				color $white
+				& span
+					margin-left 15px
+					display block
+				& a
+					margin-left 15px
+					color $white
+					font-family $Regular
+					font-size 0.75rem
+					line-height 20px
+					margin-bottom 7px
+					transition .3s
+					&:hover
+						color $red
+				& i
+					color $red
+					position absolute
+					top 4px
+	&__copyright
+		display flex
+		align-items center
+		padding 42px 0
+		justify-content space-between
+		&-left
+			display flex
+			&-block
+				&:nth-child(1)
+					margin-right 40px
+				& p
+					font-size 0.75rem
+					line-height 25px
+					color rgba(255, 255, 255, 0.6)
+					font-family $Regular
+		&-center
+			display flex
+			& i
+				color rgba(255, 255, 255, 0.4)
+				font-size 26px
+				margin-left 24px
+				transition .3s
+				&:hover
+					color $red
+			& a
+				&:nth-child(1) i
+					margin-left 0
+		&-right
+			display flex
+			&-block
+				display flex
+				align-items center
+				&:nth-child(2)
+					display inline-grid
+					margin-left 40px
+					& span
+						& a
+							font-size 0.75rem
+							line-height 25px
+							color rgba(255, 255, 255, 0.6)
+							font-family $Regular
+							transition .3s
+							&:hover
+								color $red
+				&-button
+					border 1px solid $red
+					background-color $red
+					border-radius 8px
+					display flex
+					align-items center
+					padding 11px 19px
+					cursor pointer
+					text-transform uppercase
+					justify-content center
+					color $white
+					font-family $SemiBold
+					font-size 0.75rem
+					line-height 16px
+					transition .3s
+					&:hover
+						box-shadow 0 0 4px #d66060
+	&__button
+		background $red
+		border-radius 50%
+		width 46px
+		height 46px
+		cursor pointer
+		display flex
+		justify-content center
+		align-items center
+		border 1px solid transparent
+		position absolute
+		transition .3s
+		left calc(50% - 23px)
+		top -23px
+		&-active
+			transform rotate(180deg)
+		& i
+			color $white
+			font-size 16px
+			margin-top -1px
+		&:hover
+			background-color $white
+			border-color $red
+		&:hover i
+			color $red
+.bg-footer
+	position relative
+	background-color rgba(0, 0, 0, 0.4)
+@media(max-width: 1090px)
+	.footer
+		height 257px
+		&-active
+			height auto
+		&__container
+			flex-basis 33%
+			&:nth-child(1)
+				order 1
+			&:nth-child(2)
+				order 2
+			&:nth-child(3)
+				order 5
+			&:nth-child(4)
+				order 4
+			&:nth-child(5)
+				order 3
+@media(max-width: 991px)
+	.footer
+		&-active
+			height auto
+		&__copyright
+			flex-wrap wrap
+			&-left,
+			&-right
+				flex-wrap wrap
+				&-block
+					flex-basis 100%
+					&:nth-child(1)
+						margin-bottom 20px
+						margin-right 0
+			&-left
+				flex-basis 30%
+			&-center
+				flex-basis 40%
+				display flex
+				justify-content center
+			&-right
+				flex-basis 30%
+				& i
+					font-size 20px
+				& a
+					&:nth-child(1)
+						& i
+							margin-left 0
+				&-block
+					& p
+						font-size 0.625rem
+					&:nth-child(1)
+						justify-content flex-end
+					& span
+						text-align right
+					&:nth-child(2)
+						margin-left 0
+						& span a
+							font-size 0.625rem
+@media(max-width: 680px)
+	.footer
+		height 160px
+		justify-content space-between
+		&-active
+			height auto
+			.footer__container
+				.footer__block
+					&:not(:nth-child(1))
+						display block
+				&:nth-child(4)
+					.footer__block
+						&-link
+							&:nth-last-child(1),
+							&:nth-last-child(2),
+							&:nth-last-child(3)
+								display none
+		&__container
+			flex-basis 49%
+			.footer__block
+				padding-right 0
+				margin-bottom 0
+				&-link
+					display none
+			&:nth-child(1)
+				order 2
+			&:nth-child(2)
+				order 5
+			&:nth-child(3)
+				order 3
+			&:nth-child(4)
+				order 4
+			&:nth-child(5)
+				justify-content space-between
+				order 1
+				flex-basis 100%
+				flex-wrap wrap
+				display flex
+				.footer__block
+					flex-basis 100%
+					display flex
+					justify-content space-between
+					flex-wrap wrap
+					&:nth-child(1)
+						margin-bottom 30px
+					&:nth-child(2)
+						flex-basis 49%
+					&:nth-child(3)
+						flex-basis 49%
+					&-text
+						flex-basis 49%
+@media(max-width: 581px)
+	.footer
+		height 180px
+		&__copyright
+			&-left
+				flex-basis 50%
+				&-block
+					&:nth-child(1)
+						margin-bottom 60px
+			&-center
+				width calc(100% - 40px)
+				position absolute
+			&-right
+				flex-basis 50%
+				&-block
+					&:nth-child(1)
+						margin-bottom 60px
+@media(max-width: 580px)
+	.footer
+		&-active
+			height auto
+		&__copyright
+			&-left
+				&-block
+					& svg
+						width 120px

@@ -1,0 +1,40 @@
+.popup-bg
+.popup
+	.popup-close
+		i.fa.fa-times
+	.popup__title Заказать звонок
+	form(action="#").popup__form
+		.popup__bg
+		.popup__bg2
+		.popup__form-input
+			.popup__form-input-title Как вас зовут?
+			.popup__form-input-input
+				input(type="text" name="name" placeholder="Ваш имя" required="required")
+				i.fa.fa-user
+		.popup__form-input
+			.popup__form-input-title Контактный телефон
+			.popup__form-input-input
+				input(type="tel" name="phone" placeholder="Ваш телефон" required="required")
+				i.fa.fa-phone
+		.popup__form-button
+			button(type="sumbit") Бесплатная консультация
+		.popup__form-policy
+			span Даю свое согласие на обработку
+				a(href="#") перс. данных
+		.popup__form-footer
+			p Перезвоним в течении 15 минут в рабочее время
+	.popup__button
+		i.fa.fa-times
+		span Закрыть
+.message-success-bg
+.message-success
+	.message-success-close
+		i.fa.fa-times
+	.message-success-title Успешно!
+	.message-success-container
+		.message-success-container-bg
+		.message-success-container-title Заявка отправлена
+		.message-success-container-text Мы уже получили Вашу заявку и перезвоним Вам в течении 15 минут в рабочее время.
+	.message-success-button
+		i.fa.fa-times
+		span Закрыть

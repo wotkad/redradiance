@@ -1,0 +1,185 @@
+.projects
+	padding 40px 0 50px
+	border-top 1px solid #E7E7E7
+	border-bottom 1px solid #E7E7E7
+	&__title
+		color $red
+		font-family $SemiBold
+		font-size 2rem
+		line-height 44px
+		text-align center
+		position relative
+		padding-bottom 25px
+		margin-bottom 37px
+		&:after
+			content ''
+			position absolute
+			left calc(50% - 30px)
+			width 60px
+			height 1px
+			bottom 0
+			background-color $red
+	&__slider
+		position relative
+		overflow hidden
+		border-radius 8px
+		&-slide
+			overflow hidden
+			position relative
+			&-bg
+				position absolute
+				width 100%
+				left 0
+				top 0
+				height 100%
+				background linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.2) 100%)
+			&-container
+				position relative
+				padding 60px 0
+				width 50%
+				margin 0 auto
+				&-titles
+					display flex
+					justify-content center
+					font-size 1.375rem
+					line-height 33px
+					color $white
+					margin-bottom 46px
+					flex-wrap wrap
+					font-family $Regular
+					& span
+						margin-left 5px
+						font-family $Bold
+					&-desc
+						text-align center
+						font-family $Regular
+						flex-basis 100%
+						margin-top 10px
+						font-size 0.825rem
+						line-height 21px
+						color #9b9b9b
+				.slide__body
+					display flex
+					justify-content space-between
+					margin-bottom 75px
+					&-item
+						flex-basis 20%
+						&-title
+							color $white
+							font-family $Bold
+							font-size 2rem
+							line-height 44px
+							margin-bottom 5px
+						&-text
+							color $white
+							font-family $Regular
+							font-size 0.75rem
+							line-height 18px
+				.slide__footer
+					display flex
+					justify-content center
+					&-item
+						background-color $red
+						border-radius 8px
+						padding 11px 15px
+						margin-right 15px
+						transition .3s
+						color $white
+						&:last-child
+							margin-right 0
+						& i
+							font-size 16px
+							transition .3s
+							margin-right 3px
+						& span
+							font-family $Regular
+							font-size 0.75rem
+							line-height 16px
+							transition .3s
+							text-transform uppercase
+						&:hover
+							background-color $white
+							& i
+								color $red
+							& span
+								color $red
+		.swiper-button-prev,
+		.swiper-button-next
+			border-radius 50%
+			width 46px
+			z-index 10
+			cursor pointer
+			transition .3s
+			border 1px solid transparent
+			height 46px
+			background-color $red
+			display flex
+			background-image none
+			justify-content center
+			align-items center
+			& i
+				color $white
+				transition .3s
+				font-size 20px
+		.swiper-button-prev
+			left 130px
+			& i
+				margin-top -1px
+				margin-left -2px
+			&:hover
+				background-color $white
+				border-color $red
+			&:hover
+				& i
+					color $red
+		.swiper-button-next
+			right 130px
+			& i
+				margin-top -1px
+				margin-right -2px
+			&:hover
+				background-color $white
+				border-color $red
+			&:hover
+				& i
+					color $red
+@media(max-width: 1080px)
+	.projects
+		padding 40px 0
+@media(max-width: 800px)
+	.projects
+		&__slider
+			.swiper-button-next
+				right 15px
+			.swiper-button-prev
+				left 15px
+			&-slide
+				&-container
+					&-titles
+						&-title
+							text-align center
+					width 75%
+					.slide__body
+						flex-wrap wrap
+						&-item
+							flex-basis 100%
+							display inline
+							text-align center
+							margin-bottom 10px
+							&-title
+								font-size 0.75rem
+								line-height 18px
+								margin-bottom 0
+								display inline
+							&-text
+								display inline
+								margin-left 4px
+					.slide__footer
+						&-item
+							& span
+								display none
+							& i
+								margin-right 0
+@media(max-width: 768px)
+	.projects
+		padding 30px 0

@@ -1,0 +1,41 @@
+.sitemap
+	padding 50px 0
+	display flex
+	flex-wrap wrap
+	&__block
+		flex-basis 20%
+		display flex
+		flex-wrap wrap
+		margin-bottom 30px
+		align-content flex-start
+		&-title
+			padding-right 10px
+			flex-basis 100%
+			font-family $Bold
+			font-size 0.825rem
+			line-height 19px
+			color $text
+			margin-bottom 15px
+		&-link
+			padding-right 10px
+			flex-basis 100%
+			font-family $Regular
+			font-size 0.75rem
+			line-height 19px
+			display block
+			margin-bottom 7px
+			& a
+				color $text
+				display inline-block
+				transition .3s
+				&:hover
+					color $red
+@media(max-width:991px)
+	.sitemap
+		padding 40px 0
+		&__block
+			flex-basis 33%
+@media(max-width:768px)
+	.sitemap
+		&__block
+			flex-basis 50%

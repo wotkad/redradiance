@@ -1,0 +1,17 @@
+.form
+	.form__container
+		.form__container-desc Заинтересовались предложением?
+		.form__container-title Бесплатная консультация для вас!
+		form(action="#").form__container-form
+			.form__container-form-input
+				input(type="text" name="name" placeholder="Ваше имя" required="required")
+				i.fa.fa-user
+			.form__container-form-input
+				input(type="tel" name="phone" placeholder="Ваш телефон" required="required")
+				i.fa.fa-phone
+			.form__container-form-button
+				button(type="sumbit") Получить консультацию
+			.form__container-form-policy
+				span Даю свое согласие на обработку
+					a(href="#") перс. данных
+	.form__bg

@@ -1,0 +1,381 @@
+.brif
+	background-color #FCFCFC
+	.brif__container
+		padding 50px 0 50px 0
+		display flex
+		justify-content space-between
+		.brif__block
+			&:nth-child(1)
+				flex-basis 40%
+			&:nth-child(2)
+				flex-basis 57%
+			&-title
+				font-size 2rem
+				line-height 35px
+				color $black
+				font-family $Light
+				margin-bottom 22px
+			&-desc
+				width 80%
+				margin-bottom 20px
+				& p
+					line-height 26px
+					font-size 0.825rem
+					color #232323
+					font-family $Regular
+					& a
+						line-height 26px
+						font-size 0.825rem
+						color $red
+						font-family $Regular
+						display inline
+						margin-left 4px
+						border-bottom 1px solid $red
+						transition color .3s, border-color .3s
+						&:hover
+							color #232323
+							border-color #232323
+			&-form
+				background-color $white
+				border-radius 8px
+				height 100%
+				width 100%
+				padding 25px 30px
+				border 1px solid #E7E7E7
+				&-title
+					font-family $Regular
+					font-size 1.375rem
+					line-height 33px
+					color $black
+					margin-bottom 10px
+					flex-basis 100%
+				.brif__form
+					display flex
+					flex-wrap wrap
+					&-policy
+						display flex
+						align-items center
+						flex-basis calc(60% - 15px)
+						margin-top 20px
+						margin-left 15px
+						& span
+							font-family $Regular
+							font-size 0.6rem
+							line-height 16px
+							color #929292
+							margin-right 3px
+							& a
+								font-family $Regular
+								font-size 0.6rem
+								line-height 16px
+								display inline-block
+								color $red
+								display display block
+								border-bottom 1px solid $red
+								transition .3s
+								&:hover
+									color $text
+									border-color $text
+					&-button
+						flex-basis 40%
+						margin-top 20px
+						& button
+							border 1px solid $red
+							background-color $red
+							border-radius 8px
+							display flex
+							align-items center
+							cursor pointer
+							text-transform uppercase
+							justify-content center
+							color $white
+							font-family $SemiBold
+							font-size 0.75rem
+							line-height 16px
+							transition .3s
+							width 100%
+							padding 15px 0
+							& i
+								display none
+								font-size 16px
+							&:hover
+								box-shadow 0 0 4px #d66060
+					&-title
+						font-size 0.75rem
+						line-height 16px
+						font-family $SemiBold
+						color $text
+						flex-basis 100%
+						margin-top 10px
+						margin-bottom 10px
+						&-half
+							flex-basis 50%
+						&-medium
+							flex-basis 65%
+						&:nth-child(20)
+							margin-right 2%
+						&-small
+							flex-basis 30%
+					&-input
+						flex-basis 32%
+						margin-bottom 15px
+						&:nth-child(3)
+							margin-right 2%
+						&:nth-child(4)
+							margin-right 2%
+						&:nth-child(6)
+							margin-right 2%
+						&:nth-child(7)
+							margin-right 2%
+						&:nth-child(10)
+							margin-right 2%
+						&:nth-child(11)
+							margin-right 2%
+						&:nth-child(13)
+							margin-right 2%
+						&:nth-child(14)
+							margin-right 2%
+						&:nth-child(17)
+							margin-right 2%
+						&:nth-child(18)
+							margin-right 2%
+						&:nth-child(22)
+							margin-right 2%
+						&:nth-child(27)
+							margin-right 2%
+						&:nth-child(30)
+							margin-right 2%
+						&:nth-child(31)
+							margin-right 2%
+						&:nth-child(33)
+							margin-right 2%
+						&-textarea
+							flex-basis 66%
+							margin-bottom 30px
+							& textarea
+								border 1px solid #E7E7E7
+								border-radius 8px
+								font-family $Light
+								background-color #FCFCFC
+								padding 12px 20px
+								resize none
+								font-size 0.825rem
+								line-height 27px
+								color #B2B2B2
+								width 100%
+								height 90px
+						& input
+							display none
+						& label
+							border 1px solid #E7E7E7
+							border-radius 8px
+							transition border-color .3s, color .3s
+							padding 10px 6px
+							background-color $white
+							font-family $Light
+							cursor pointer
+							font-size 0.825rem
+							line-height 27px
+							color $text
+							text-align center
+							display block
+							&:hover
+								color $red
+								border-color $red
+						& input[type="radio"]:checked+label
+							border-color $red
+							color $red
+							font-family $Regular
+						&-upload
+							margin-bottom 30px
+							& label
+								background-color $red
+								transition background-color .3s, border-color .3s
+								& i
+									color $white
+									margin-right 4px
+									transition color .3s
+								& span
+									font-family $Light
+									color $white
+									font-size 0.825rem
+									line-height 27px
+									transition color .3s
+								&:hover
+									color $red
+									border-color $red
+									background-color $white
+								&:hover span,
+								&:hover i
+									color $red
+									border-color $red
+						&-half
+							flex-basis 49%
+							position relative
+							& i
+								position absolute
+								transition .3s
+								left 20px
+								top 14px
+								padding-right 15px
+								color #e7e7e7
+								font-size 20px
+								border-right 1px solid #e7e7e7
+							& input
+								border 1px solid #e7e7e7
+								font-size 0.825rem
+								padding 7.5px 15px 7.5px 65px
+								display block
+								border-radius 8px
+								overflow hidden
+								line-height 31px
+								color #b2b2b2
+								width 100%
+								transition .3s
+								&:focus
+									border-color $red
+								&:focus ~ i
+									color $red
+								&:hover
+									border-color $red
+								&:hover ~ i
+									color $red
+@media(max-width: 1080px)
+	.brif
+		.brif__container
+			padding 40px 0
+			.brif__block
+				&:nth-child(1)
+					display none
+				&:nth-child(2)
+					flex-basis 100%
+@media(max-width: 600px)
+	.brif
+		.brif__container
+			.brif__block
+				&-form
+					&-title
+						&:nth-child(1)
+							order 1
+						&:nth-child(24)
+							order 24
+					.brif__form
+						&-input
+							flex-basis 100%
+							&:nth-child(3)
+								margin-right 0%
+								flex-basis 100%
+								order 3
+							&:nth-child(4)
+								margin-right 0%
+								flex-basis 100%
+								order 4
+							&:nth-child(5)
+								flex-basis 100%
+								order 5
+							&:nth-child(6)
+								margin-right 0%
+								flex-basis 100%
+								order 6
+							&:nth-child(7)
+								margin-right 0%
+								flex-basis 100%
+								order 7
+							&:nth-child(8)
+								order 8
+								flex-basis 100%
+							&:nth-child(10)
+								margin-right 0%
+								flex-basis 100%
+								order 10
+							&:nth-child(11)
+								margin-right 0%
+								flex-basis 100%
+								order 11
+							&:nth-child(12)
+								order 12
+								flex-basis 100%
+							&:nth-child(13)
+								margin-right 0%
+								flex-basis 100%
+								order 13
+							&:nth-child(14)
+								margin-right 0%
+								flex-basis 100%
+								order 14
+							&:nth-child(15)
+								order 15
+								flex-basis 100%
+							&:nth-child(17)
+								margin-right 0%
+								flex-basis 100%
+								order 17
+							&:nth-child(18)
+								margin-right 0%
+								flex-basis 100%
+								order 18
+							&:nth-child(19)
+								flex-basis 100%
+								order 19
+							&:nth-child(30)
+								margin-right 0%
+								flex-basis 100%
+								order 30
+							&:nth-child(31)
+								margin-right 0%
+								flex-basis 100%
+								order 31
+							&:nth-child(32)
+								order 32
+								flex-basis 100%
+							&:nth-child(33)
+								margin-right 0%
+								flex-basis 100%
+								order 33
+							&:nth-child(34)
+								order 34
+								flex-basis 100%
+							&:nth-child(22)
+								order 21
+								flex-basis 100%
+							&:nth-child(23)
+								order 23
+								flex-basis 100%
+							&:nth-child(27)
+								order 26
+								flex-basis 100%
+							&:nth-child(28)
+								order 28
+								flex-basis 100%
+						&-button
+							flex-basis 100%
+							&:nth-child(35)
+								order 35
+						&-policy
+							margin-left 0
+							flex-basis 100%
+							&:nth-child(36)
+								order 36
+						&-title
+							&:nth-child(2)
+								order 2
+							&:nth-child(9)
+								order 9
+							&:nth-child(16)
+								order 16
+							&-small
+								flex-basis 100%
+							&-medium
+								flex-basis 100%
+							&-half
+								flex-basis 100%
+							&:nth-child(20)
+								order 20
+							&:nth-child(21)
+								order 22
+							&:nth-child(25)
+								order 25
+							&:nth-child(26)
+								order 28
+							&:nth-child(29)
+								order 29

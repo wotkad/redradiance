@@ -1,0 +1,298 @@
+.s
+	background-color #fcfcfc
+#page-services
+	.services
+		height 100%
+.services
+	padding 50px 0 40px 0
+	display flex
+	flex-wrap wrap
+	overflow hidden
+	justify-content space-between
+	position relative
+	height 760px
+	&__active
+		height auto
+	&__overlay
+		width 100%
+		background linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, .4) 100%)
+		position absolute
+		bottom 0
+		z-index 1
+		height 140px
+		&__active
+			display none
+			z-index -1
+	&__block
+		border 1px solid #E7E7E7
+		border-radius 8px
+		flex-basis calc(33.33334% - 15px)
+		margin 0 20px 20px 0
+		padding 20px 30px
+		position relative
+		overflow hidden
+		display flex
+		flex-wrap wrap
+		align-content flex-start
+		transition background-color .3s
+		&-bg
+			position absolute
+			right 30px
+			bottom 10px
+			& svg path
+				transition .3s
+		&-img
+			background url(/images/katanas.png) 100% 65% no-repeat
+			background-size cover
+			filter grayscale(100%)
+			position absolute
+			height 100%
+			top 0
+			width 100%
+			right -35%
+			opacity 0
+			transform scale(0.95)
+			transition .3s
+		&:hover
+			border-color transparent
+			background-color $text
+			.services__block-bg path
+				fill rgba(255, 255, 255, 1)
+			.services__block-img
+				opacity .3
+				transform scale(1)
+				z-index 9
+			.services__block-title
+				& a
+					color $white
+					z-index 10
+					position relative
+					border-color $white
+					&:hover
+						color $red
+			.services__block-link
+				z-index 10
+				position relative
+				& a
+					color $white
+					text-shadow: 0px 3.4px $text
+					border-bottom 1px solid rgba(255, 255, 255, 0.2)
+					&:hover
+						color $red
+		&-auto
+			flex-basis calc(67.33334% - 15px)
+			overflow hidden
+			position relative
+			.services__block-bg
+				display none
+			.services__block-bg-mob
+				display block
+				position absolute
+				right 30px
+				bottom 10px
+				z-index 1
+			&:hover
+				border-color transparent
+				.services__block-auto-img
+					transform scale(1.1)
+			&-img
+				top 0
+				height 100%
+				width 70%
+				position absolute
+				background url(/images/jug.png) 100% 30% no-repeat
+				background-size cover
+				filter grayscale(100%)
+				opacity .1
+				right 20px
+				transition .3s
+		&-big
+			border-radius 8px
+			flex-basis calc(33.33334% - 15px)
+			margin 0 0 20px 0
+			position relative
+			overflow hidden
+			display flex
+			flex-wrap wrap
+			align-content flex-start
+			transition background-color .3s
+			border none
+			padding 0
+			&:hover
+				background-color transparent
+				.services__block-img
+					opacity 0
+				.services__block-link
+					z-index 10
+					position relative
+					& a
+						color $white
+						&:hover
+							color $red
+							border-color $text
+		&__block
+			flex-basis 100%
+			transition: .3s
+			position relative
+			overflow hidden
+			&-bg
+				position absolute
+				right 30px
+				top 20px
+				z-index 1
+				& svg path
+					transition .3s
+				&:nth-child(3)
+					top 10px
+			.services__block-img
+				background-position 100% 40%
+			&:hover
+				background-color $text
+				.services__block__block-bg
+					& svg path
+						fill #fff
+				.services__block-img
+					opacity .3
+				&:nth-child(2)
+					border-color transparent
+					& > a:nth-child(1)
+						color $white
+						display display block
+						text-shadow: 0px 3.4px $text
+						border-bottom 1px solid rgba(255, 255, 255, 0.2)
+			&:nth-child(1)
+				background $red
+				border-radius 8px
+				padding 20px 30px
+				margin-bottom 20px
+				transition .3s
+				.services__block-title a
+					color $white
+				& > span:nth-child(2)
+					& a
+						color $white
+						display display block
+						text-shadow: 0px 3.4px $redborder
+						border-bottom 1px solid rgba(255, 255, 255, 0.2)
+				&:hover
+					background $text
+				&:hover svg path
+					opacity 1
+				&:hover
+					& span
+						& a
+							border-color $white
+							color $white
+							&:hover
+								color $red
+			&:nth-child(2)
+				border 1px solid #E7E7E7
+				padding 20px 30px
+				border-radius 8px
+				& > span:nth-child(1)
+					margin-bottom 0
+					transition .3s
+					line-height 27px
+					& a
+						transition .3s
+				&:hover
+					& span
+						& a
+							border-color $white
+							color $white
+							&:hover
+								color $red
+		&:nth-child(3n+3)
+			margin-right 0
+		&-last
+			margin-right 0
+			.services__block-bg
+				display none
+			.services__block-bg-mob
+				display block
+				position absolute
+				right 30px
+				bottom 10px
+				z-index 1
+		&-title
+			margin-bottom 20px
+			display block
+			position relative
+			& a
+				font-family $Regular
+				font-size 1.375rem
+				line-height 33px
+				color $black
+				flex-basis 100%
+				transition .3s
+				display inline
+				border-bottom 1px solid $redborder
+		&-link
+			color $text
+			margin-bottom 10px
+			line-height 17px
+			flex-basis 100%
+			font-size 0.825rem
+			font-family $Light
+			& a
+				transition .3s
+				display display block
+				border-bottom 1px solid $redborder
+				text-shadow: 0px 3.4px $white
+	&__button
+		text-align center
+		background-color $red
+		color $white
+		padding 11px 52px
+		border-radius 8px
+		font-size 0.75rem
+		text-transform uppercase
+		line-height 16px
+		font-family $SemiBold
+		width 300px
+		position absolute
+		bottom 80px
+		left calc(50% - 150px)
+		z-index 100
+		cursor pointer
+		transition .3s
+		&:hover
+			box-shadow 0 0 4px #d66060
+		&__active
+			display none
+			z-index -1
+@media(max-width: 1080px)
+	.services
+		padding 40px 0
+		height 736px
+		&__active
+			height auto
+		&__block
+			flex-basis calc(50% - 10px)
+			&-big
+				flex-basis calc(50% - 10px)
+			&:nth-child(2n)
+				margin-right 0
+			&:nth-child(3n+3)
+				margin-right 0px
+			&-auto
+				order 2
+				flex-basis 100%
+				margin-right 0
+				margin-bottom 0
+@media(max-width: 690px)
+	.services
+		height 760px
+		&__active
+			height auto
+		&__block
+			flex-basis 100%
+			margin 0 0 20px 0
+			&-big
+				flex-basis 100%
+			&:nth-child(2n)
+				margin-right 0
+			&:nth-child(3n+3)
+				margin-right 0px
+			&-auto
+				margin-bottom 0

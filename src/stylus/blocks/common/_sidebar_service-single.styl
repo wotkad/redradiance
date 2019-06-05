@@ -1,0 +1,217 @@
+.sidebar
+	padding-top 50px
+	flex-basis 27%
+	&__garant
+		padding 30px
+		border-radius 8px
+		border 1px solid #E7E7E7
+		background-color #FCFCFC
+		margin-bottom 30px
+		&-title
+			padding-bottom 20px
+			font-family $Regular
+			font-size 1.375rem
+			line-height 33px
+			color $black
+			position relative
+			margin-bottom 30px
+			&:after
+				content ''
+				width 80px
+				height 1px
+				background-color $red
+				position absolute
+				left 0
+				bottom 0
+		&-item
+			font-family $Regular
+			font-size 0.825rem
+			line-height 24px
+			color $text
+			margin-bottom 15px
+			position relative
+			padding-left 35px
+			&:before
+				content ''
+				position absolute
+				left 0
+				top 10px
+				border-radius 50%
+				background-color $red
+				width 18px
+				height 18px
+	&__faq
+		padding 30px
+		border-radius 8px
+		border 1px solid #E7E7E7
+		background-color #FCFCFC
+		margin-bottom 30px
+		&-title
+			padding-bottom 20px
+			font-family $Regular
+			font-size 1.375rem
+			line-height 33px
+			color $black
+			position relative
+			margin-bottom 30px
+			&:after
+				content ''
+				width 80px
+				height 1px
+				background-color $red
+				position absolute
+				left 0
+				bottom 0
+		&-item
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			border-bottom 1px solid #E7E7E7
+			overflow hidden
+			&-title
+				cursor pointer
+				display flex
+				align-items center
+				justify-content space-between
+				flex-basis 100%
+				font-size 0.825rem
+				line-height 21px
+				color #232323
+				font-family $Regular
+				padding 15px 0
+				transition .3s
+				&-active
+					color $red
+				&:hover
+					color $red
+				& i
+					transition .3s
+			&-text
+				flex-basis 100%
+				font-size 0.825rem
+				line-height 24px
+				color $text
+				font-family $Light
+				padding-bottom 15px
+				display none
+				&-active
+					display flex
+			&:nth-child(5)
+				border none
+		&-button
+			background-color $red
+			padding 16px
+			text-transform uppercase
+			color $white
+			font-size 0.75rem
+			font-family $Bold
+			cursor pointer
+			margin-top 20px
+			line-height 16px
+			border-radius 8px
+			display block
+			border none
+			width 100%
+			transition .3s
+			text-align center
+			&:hover
+				box-shadow 0 0 4px #d66060
+			& span
+				&:nth-child(1)
+					margin-right 3px
+	&__cats
+		padding 30px
+		border-radius 8px
+		border 1px solid #E7E7E7
+		background-color #FCFCFC
+		margin-bottom 30px
+		&-title
+			padding-bottom 20px
+			font-family $Regular
+			font-size 1.375rem
+			line-height 33px
+			color $black
+			position relative
+			margin-bottom 30px
+			&:after
+				content ''
+				width 80px
+				height 1px
+				background-color $red
+				position absolute
+				left 0
+				bottom 0
+		&-item
+			display flex
+			justify-content space-between
+			padding 15px 0
+			align-items center
+			color $red
+			font-family $Regular
+			font-size 0.825rem
+			line-height 21px
+			border-bottom 1px solid #E7E7E7
+			& span
+				transition .3s
+				text-shadow 0px 3px white
+				border-bottom 1px solid $redborder
+				line-height 19px
+			& i
+				transition .3s
+				color #bcbcbc
+				font-size 14px
+			&:last-child
+				border-bottom none
+			&:hover i
+				color $red
+			&:hover span
+				color $text
+				border-color $text
+@media(max-width: 1065px)
+	.sidebar
+		flex-basis 100%
+		padding-top 0
+		order 3
+		&__garant
+			display flex
+			flex-wrap wrap
+			&-title
+				flex-basis 100%
+				margin-bottom 20px
+			&-item
+				flex-basis 50%
+		&__faq
+			display flex
+			flex-wrap wrap
+			&-title
+				flex-basis 50%
+				order 1
+				margin-bottom 5px
+			&-button
+				flex-basis 50%
+				order 2
+				margin-top 0
+				margin-bottom 10px
+			&-item
+				flex-basis 100%
+				order 3
+		&__cats
+			&-title
+				margin-bottom 5px
+@media(max-width: 650px)
+	.sidebar
+		&__faq
+			&-title
+				flex-basis 100%
+			&-button
+				flex-basis 100%
+				order 3
+				margin-top 20px
+				margin-bottom 0
+			&-item
+				order 2
+		&__cats
+			margin-bottom 0
+		&__garant
+			&-item
+				flex-basis 100%

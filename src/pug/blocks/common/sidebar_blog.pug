@@ -1,0 +1,66 @@
+.blog__sidebar
+	.blog__sidebar-item
+		.blog__sidebar-item-titles
+			.blog__sidebar-item-titles-title Подписаться
+			.blog__sidebar-item-titles-desc Мы не рассылаем спам, только полезные статьи для вашего бизнеса из мира digital-маркетинга
+		form(action="#").blog__sidebar-item-form
+			.blog__sidebar-item-form-title Электронный адрес
+			.blog__sidebar-item-form-input
+				input(type="email" name="email" placeholder="Ваш e-mail" required="required")
+				i.fa.fa-envelope
+			.blog__sidebar-item-form-button
+				button(type="sumbit") Подписаться на рассылку
+			.blog__sidebar-item-form-policy
+				span Подписываясь на рассылку, я даю согласие на обработку персональных данных и соглашаюсь c
+					a(href="#") политикой конфиденциальности
+	.blog__sidebar-item
+		.blog__sidebar-item-titles
+			.blog__sidebar-item-titles-title Популярные записи
+		.blog__sidebar-item-populars
+			a(href="#").blog__sidebar-item-populars-link
+				span
+					span Скидки для постоянных клиентов
+				.blog__sidebar-item-populars-link-reviews
+					i.fa.fa-eye
+					span 440
+				.blog__sidebar-item-populars-link-comments
+					i.fa.fa-comment-o
+					span 15
+			a(href="#").blog__sidebar-item-populars-link
+				span
+					span Обновление портфолио. Новый проект!
+				.blog__sidebar-item-populars-link-reviews
+					i.fa.fa-eye
+					div 440
+				.blog__sidebar-item-populars-link-comments
+					i.fa.fa-comment-o
+					div 15
+			a(href="#").blog__sidebar-item-populars-link
+				span
+					span Скидки для постоянных клиентов
+				.blog__sidebar-item-populars-link-reviews
+					i.fa.fa-eye
+					div 440
+				.blog__sidebar-item-populars-link-comments
+					i.fa.fa-comment-o
+					div 15
+	.blog__sidebar-item
+		.blog__sidebar-item-bg
+		form(action="#").blog__sidebar-item-callback
+			.blog__sidebar-item-callback-container
+				.blog__sidebar-item-callback-container-title Как вас зовут?
+				.blog__sidebar-item-callback-container-input
+					input(type="text" name="name" placeholder="Ваш имя" required="required")
+					i.fa.fa-user
+			.blog__sidebar-item-callback-container
+				.blog__sidebar-item-callback-container-title Контактный телефон
+				.blog__sidebar-item-callback-container-input
+					input(type="tel" name="phone" placeholder="Ваш телефон" required="required")
+					i.fa.fa-phone
+			.blog__sidebar-item-callback-button
+				button(type="sumbit") Бесплатная консультация
+			.blog__sidebar-item-callback-policy
+				span Даю свое согласие на обработку
+					a(href="#") перс. данных
+		.blog__sidebar-item-footer
+			p Перезвоним в течении 15 минут в рабочее время

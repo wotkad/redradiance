@@ -1,0 +1,141 @@
+.b
+	background-color #FCFCFC
+	border-bottom 1px solid #E7E7E7
+.business
+	padding 50px 0 30px 0
+	display flex
+	flex-wrap wrap
+	&__block
+		border 1px solid #E7E7E7
+		border-radius 8px
+		flex-basis calc(33.33334% - 15px)
+		margin 0 20px 20px 0
+		padding 20px 30px
+		position relative
+		overflow hidden
+		display flex
+		align-content flex-start
+		flex-wrap wrap
+		transition background-color .3s
+		&-full
+			flex-basis calc(67.2% - 15px)
+			.business__block-link
+				flex-basis 34%
+			&:nth-child(10)
+				.business__block-link
+					flex-basis 45%
+		&-bg
+			filter grayscale(100%)
+			position absolute
+			height 100%
+			top 0
+			width 100%
+			right 0
+			z-index 1
+			opacity .06
+			transition .3s
+		&-title
+			font-family $Regular
+			font-size 1.375rem
+			line-height 33px
+			color $black
+			flex-basis 100%
+			z-index 3
+			margin-bottom 20px
+			transition .3s
+			& a
+				border-bottom 1px solid $redborder
+		&-link
+			color $text
+			margin-bottom 10px
+			line-height 17px
+			flex-basis 100%
+			z-index 3
+			font-size 0.825rem
+			font-family $Light
+			& a
+				transition .3s
+				display display block
+				border-bottom 1px solid $redborder
+		&:nth-child(3),
+		&:nth-child(5),
+		&:nth-child(8),
+		&:nth-child(10)
+			margin-right 0
+		&:hover
+			border-color 0
+			background-color $text
+			.business__block-bg
+				transform scale(1.05)
+				z-index 9
+			.business__block-title
+				color $white
+				z-index 10
+				position relative
+				& a
+					color $white
+					transition .3s
+					border-color $white
+					&:hover
+						color $red
+			.business__block-link
+				z-index 10
+				position relative
+				& a
+					color $white
+					border-bottom 1px solid rgba(255, 255, 255, 0.2)
+					&:hover
+						color $red
+@media(max-width: 991px)
+	.business
+		padding 40px 0
+		&__block
+			flex-basis calc(50% - 10px)
+			&-full
+				flex-basis 100%
+			&:nth-child(1)
+				margin-right 20px
+				order 1
+			&:nth-child(2)
+				margin-right 0
+				order 2
+			&:nth-child(3)
+				margin-right 20px
+				order 3
+			&:nth-child(4)
+				margin-right 0
+				order 5
+			&:nth-child(5)
+				margin-right 0
+				order 4
+			&:nth-child(6)
+				margin-right 20px
+				order 6
+			&:nth-child(7)
+				margin-right 0
+				order 7
+			&:nth-child(8)
+				margin-right 20px
+				order 8
+			&:nth-child(9)
+				margin-right 0
+				order 9
+			&:nth-child(10)
+				order 10
+				margin-right 0
+@media(max-width: 768px)
+	.business
+		padding 40px 0 20px
+@media(max-width: 690px)
+	.business
+		&__block
+			flex-basis 100%
+			&:nth-child(2n),
+			&:nth-child(2n+1)
+				margin-right 0
+			&-full
+				.business__block-link
+					flex-basis 100%
+				&:nth-child(10)
+					.business__block-link
+						flex-basis 100%

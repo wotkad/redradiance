@@ -1,0 +1,9 @@
+#page-services-single .h .home__block:nth-child(1) {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  z-index: 1;
+}
+#page-services-single .h .home__block:nth-child(2) img {
+  opacity: 0.15;
+}

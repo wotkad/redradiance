@@ -1,0 +1,55 @@
+.g-wrapper
+	.contacts
+		.contacts__block
+			.contacts__block-item
+				.contacts__block-item-title Телефон
+				.contacts__block-item-text
+					i.fa.fa-phone
+					a(href="tel:+7 (495) 134-94-34") +7 (495) 134-94-34
+			.contacts__block-item
+				.contacts__block-item-title E-mail
+				.contacts__block-item-text
+					i.fa.fa-envelope
+					a(href="mailto:info@redradiance.ru") info@redradiance.ru
+			.contacts__block-item
+				.contacts__block-item-title Адрес
+				.contacts__block-item-text
+					i.fa.fa-location-arrow
+					span г. Москва, ул. Большая Серпуховская д.44, стр. 1, офис 414
+			.contacts__block-item
+				.contacts__block-item-title Время работы
+				.contacts__block-item-text
+					i.fa.fa-clock-o
+					span Ежедневно, 10:00 — 20:00
+			.contacts__block-item
+				form(action="#").contacts__block-item__form
+					.contacts__block-item__form-input
+						input(type="email" name="email" placeholder="Ваш e-mail" required="required")
+						i.fa.fa-envelope
+					.contacts__block-item__form-button
+						button(type="sumbit") Подписаться на рассылку
+		.contacts__block
+			form(action="#").contacts__block-form
+				.contacts__block-form-item
+					.contacts__block-form-item-title Как вас зовут?
+					.contacts__block-form-item-input
+						input(type="text" name="name" placeholder="Ваше имя" required="required")
+						i.fa.fa-user
+				.contacts__block-form-item
+					.contacts__block-form-item-title Контактный телефон
+					.contacts__block-form-item-input
+						input(type="tel" name="phone" placeholder="Ваш телефон" required="required")
+						i.fa.fa-phone
+				.contacts__block-form-item
+					.contacts__block-form-item-title Ваше сообщение
+					.contacts__block-form-item-textarea
+						textarea(type="text" name="message" placeholder="Напишите ваш запрос" required="required")
+				.contacts__block-form-button
+					button(type="submit") Отправить сообщение
+				.contacts__block-form-policy
+					span Нажимая на кнопку «Позвоните мне», я даю согласие на обработку персональных данных и соглашаюсь c
+						a(href="#") политикой конфиденциальности
+.contacts__map
+	.ymap-container
+		.loader.loader-default
+		#map-yandex

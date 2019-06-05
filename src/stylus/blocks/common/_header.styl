@@ -1,0 +1,498 @@
+.header__mob
+	height 100%
+	width 100%
+	opacity 0
+	z-index -1
+	display none
+	&-bg
+		opacity 0
+		z-index -1
+		display block
+.head
+	position fixed
+	top 0
+	width 100%
+	z-index 110
+	transition background-color .3s
+	&-active
+		background-color rgba(21,21,21,1)
+	.header
+		padding 31px 0
+		position relative
+		transition padding .2s
+		display flex
+		color $white
+		align-items center
+		justify-content space-between
+		opacity 0
+		transform translateX(-20px)
+		&-active
+			padding 16px 0
+			.header__menu-item
+				color $white
+				text-shadow 0 2.4px rgba(21,21,21,.95)
+				&-active
+					color $red
+					border-bottom 1px solid $redborder
+			.header__contact-block
+				&:nth-child(1),
+				&:nth-child(2)
+					border-color #424242
+					background-color transparent
+					color $white
+				&:nth-child(1)
+					& i
+						color $white
+				&:nth-child(2)
+					& i
+						color $white
+		&__button
+			border 1px solid $red
+			background-color $red
+			border-radius 8px
+			display none
+			width 100px
+			flex-direction column
+			height 46px
+			align-items center
+			cursor pointer
+			text-transform uppercase
+			justify-content center
+			color $white
+			font-family $SemiBold
+			font-size 0.75rem
+			line-height 16px
+			position relative
+			transition .3s
+			&:hover
+				box-shadow 0 0 4px $red
+			&-menu
+				display flex
+				align-items center
+				position absolute
+				user-select none
+			&-close
+				display flex
+				user-select none
+				align-items center
+				transform translateY(-15px)
+				opacity 0
+				position absolute
+				& i
+					margin-top -1px
+			& i
+				font-size 16px
+				margin-right 4px
+				color $white
+			& span
+				font-family $SemiBold
+				font-size 0.75rem
+				line-height 16px
+				color $white
+				text-transform uppercase
+		&__logo svg path
+			transition .3s
+		&__menu
+			display flex
+			align-items center
+			&-item
+				font-size 0.75rem
+				font-family $Regular
+				line-height 16px
+				margin 0 20px
+				display inline-block
+				transition .3s
+				border-bottom 1px solid transparent
+				&:hover
+					color $red
+					border-bottom 1px solid $redborder
+				&:last-child
+					margin-right 25px
+				&-active
+					color $red
+					border-bottom 1px solid $redborder
+		&__contact
+			display flex
+			align-items center
+			&-block
+				transition .3s
+				padding 12px
+				&:nth-child(1),
+				&:nth-child(2)
+					border 1px solid #E7E7E7
+					background-color rgba(255, 255, 255, 0.8)
+					border-radius 8px
+					display flex
+					align-items center
+					justify-content center
+					color $black
+					margin-right 15px
+				&:nth-child(1)
+					font-family $SemiBold
+					font-size 0.75rem
+					line-height 16px
+					color $text
+					transition .3s
+					&:hover
+						color $red
+					& i
+						transition .3s
+						color $red
+						font-size 16px
+						margin-right 10px
+				&:nth-child(2)
+					font-family $Light
+					font-size 0.75rem
+					line-height 16px
+					color $text
+					& i
+						transition .3s
+						color $black
+						font-size 16px
+						margin-right 10px
+				&:nth-child(3)
+					border 1px solid $red
+					background-color $red
+					border-radius 8px
+					display flex
+					align-items center
+					cursor pointer
+					text-transform uppercase
+					justify-content center
+					color $white
+					font-family $SemiBold
+					font-size 0.75rem
+					line-height 16px
+					transition .3s
+					& i
+						display none
+						font-size 16px
+					&:hover
+						box-shadow 0 0 4px #d66060
+.h
+	background-color $white
+	height 400px
+	overflow hidden
+	.home
+		height 400px
+		display flex
+		align-items center
+		position relative
+		justify-content space-between
+		&__block
+			&:nth-child(1)
+				opacity 0
+				transform translateX(-20px)
+				flex-basis 50%
+				display flex
+				flex-direction column
+				justify-content center
+				z-index 1
+			&:nth-child(2)
+				flex-basis 35px
+				min-width 35%
+				position absolute
+				height 100%
+				opacity 0
+				top 0
+				left 50%
+				& img
+					position absolute
+					top 0
+					left 0
+			&:nth-child(3)
+				flex-basis 15%
+				display flex
+				flex-direction column
+				justify-content center
+				margin-top 50px
+			&-title
+				margin-top 50px
+				font-family $Light
+				margin-bottom 50px
+				font-size 3.25rem
+				color $red
+				transition .3s
+				display flex
+				flex-wrap wrap
+				&-breadcrums
+					flex-basis 100%
+					&-main
+						border-bottom 1px dashed rgba(213, 63, 63, 0.4);
+						color $red
+						font-size 0.825rem
+						line-height 18px
+						font-family $Regular
+						margin-right 3px
+						transition .3s
+						&:hover
+							color #929292
+							border-color #929292
+					&-sub
+						color #929292
+						font-size 0.825rem
+						line-height 18px
+						font-family $Regular
+						transition .3s
+						&:hover
+							color $red
+					& span
+						color $red
+						font-size 0.825rem
+						line-height 18px
+						font-family $Regular
+						margin-right 3px
+				&-text
+					color $black
+					line-height 64px
+					margin-right 10px
+				&-dynamic
+					line-height 64px
+			&-icons
+				display flex
+				& i
+					color rgba(49, 49, 49, 0.4)
+					font-size 30px
+					margin-right 20px
+					transition .3s
+					&:hover
+						color $red
+			&-item
+				flex-basis 100%
+				margin 14px 0
+				display flex
+				align-items center
+				opacity 0
+				transition opacity .3s
+				&-symbol
+					flex-basis 50%
+				&-text
+					flex-basis 50%
+					font-family $SemiBold
+					font-size 0.625rem
+					text-transform uppercase
+					opacity 0
+					transition opacity .3s
+					color #c5c5c5
+					line-height 14px
+					letter-spacing 1px
+				&:nth-child(1)
+					margin-top 50px
+
+@media(max-width: 1140px)
+	.head
+		.header
+			&__contact
+				&-block
+					&:nth-child(3)
+						width 42px
+						& i
+							display block
+							font-size 16px
+					&-button
+						display none
+	.h
+		.home
+			&__block
+				&:nth-child(1)
+					flex-basis 55%
+@media(max-width: 1040px)
+	.head
+		.header
+			&__menu
+				&-item
+					margin 0 15px
+@media(max-width: 991px)
+	.menu-active
+		.head
+			z-index 10000
+			.header__button
+				border-color $white
+				background-color transparent
+				&:hover
+					box-shadow 0 0 4px $white
+		.header__mob-bg
+			display block
+		.header__mob
+			display block
+		.header__logo svg path
+			fill $white
+	.head
+		.g-wrapper
+			padding 0 20px
+		.header
+			padding 16px 0
+			&__button
+				display flex
+			&__menu
+				display none
+			&__contact
+				display none
+	.header__mob
+		position fixed
+		padding 78px 20px 15px 20px
+		&-bg
+			background-color rgba(0, 0, 0, 0.6)
+			position fixed
+			width 100%
+			height 100vh
+			left 0
+			top 0
+		&-menu
+			background-color $white
+			border-radius 8px
+			padding 0 20px
+			display flex
+			flex-wrap wrap
+			flex-basis 100%
+			opacity 0
+			z-index -1
+			margin-bottom 15px
+			border 1px solid #e7e7e7
+			&-item
+				border-bottom 1px solid #ededed
+				padding 10px 0
+				flex-basis 100%
+				font-family $Light
+				text-align center
+				font-size 1.5rem
+				line-height 33px
+				color $text
+				transition color .3s
+				&:hover
+					color $red
+				&:last-child
+					border none
+		&-contact
+			opacity 0
+			z-index -1
+			margin-bottom 15px
+			background-color $white
+			border 1px solid #e7e7e7
+			padding 20px
+			display flex
+			flex-wrap wrap
+			flex-basis 100%
+			border-radius 8px
+			justify-content center
+			&-items
+				display flex
+				flex-basis 100%
+				justify-content center
+				align-items center
+				.header__mob-contact-item
+					border 1px solid #E7E7E7
+					background-color rgba(255, 255, 255, 0.8)
+					border-radius 8px
+					display flex
+					align-items center
+					justify-content center
+					padding 12px
+					color $black
+					margin-bottom 15px
+					&:nth-child(1)
+						font-family $SemiBold
+						font-size 0.75rem
+						line-height 16px
+						color $text
+						margin-right 15px
+						transition color .3s
+						width 150px
+						&:hover
+							color $red
+						& i
+							transition .3s
+							color $red
+							font-size 16px
+							margin-right 10px
+					&:nth-child(2)
+						font-family $Light
+						font-size 0.75rem
+						line-height 16px
+						color $text
+						margin-right 0
+						width 115px
+						& i
+							transition .3s
+							color $black
+							font-size 16px
+							margin-right 10px
+				.header__mob-contact-button
+					text-align center
+					background-color $red
+					color $white
+					padding 11px 52px
+					border-radius 8px
+					border 1px solid transparent
+					font-size 0.75rem
+					text-transform uppercase
+					line-height 16px
+					font-family $Bold
+					cursor pointer
+					transition background-color .3s, color .3s, border-color .3s
+					width 280px
+					&:hover
+						color $red
+						background-color $white
+						border-color $red
+	.h
+		.home
+			&__block
+				&:nth-child(2)
+					left 45%
+				&-item
+					flex-wrap wrap
+					&-text
+						flex-basis 100%
+						text-align center
+						margin-top 4px
+					&-symbol
+						flex-basis 100%
+						display flex
+						justify-content center
+				&-title
+					&-dynamic
+						font-size 2rem
+						line-height 35px
+					&-text
+						font-size 2rem
+						line-height 35px
+@media(max-width: 768px)
+	.h
+		.home
+			&__block
+				&-item
+					&-text
+						display none
+				&:nth-child(3)
+					display none
+@media(max-width: 414px)
+	.header
+		&__mob
+			&-contact
+				&-items
+					justify-content space-between
+					.header__mob-contact-item
+						padding 12px 7px
+						&:nth-child(1)
+							width 55%
+							margin-right 10px
+							& i
+								margin-right 5px
+						&:nth-child(2)
+							width 41%
+							& i
+								margin-right 5px
+					.header__mob-contact-button
+						width 100%
+	.h
+		.home
+			&__block
+				&:nth-child(1)
+					flex-basis 75%
+@media(max-width: 375px)
+	.h
+		.home
+			&__block
+				&:nth-child(1)
+					flex-basis 100%

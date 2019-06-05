@@ -1,0 +1,339 @@
+.blog
+	&__sidebar
+		flex-basis 27%
+		&-item
+			padding 30px
+			border-radius 8px
+			border 1px solid #E7E7E7
+			background-color #FCFCFC
+			margin-bottom 30px
+			position relative
+			overflow hidden
+			&-bg
+				position absolute
+				height 100%
+				left -50%
+				top 0
+				bottom 0
+				width 100%
+				background url(/images/callback-bg.png) 100% 50% no-repeat
+				background-size cover
+			&:nth-child(3)
+				border none
+				padding 0
+				margin-bottom 0
+				background linear-gradient(239.03deg, #D53F3F 15.53%, #9E2020 81.03%)
+			&-titles
+				position relative
+				margin-bottom 20px
+				&-title
+					padding-bottom 12px
+					font-family $Regular
+					font-size 1.375rem
+					line-height 33px
+					color $black
+				&-desc
+					font-size 0.75rem
+					font-family $Light
+					line-height 19px
+					color #232323
+					padding-bottom 15px
+				&:after
+					content ''
+					width 80px
+					height 1px
+					background-color $red
+					position absolute
+					left 0
+					bottom 0
+			&-form
+				display flex
+				flex-wrap wrap
+				&-title
+					font-family $SemiBold
+					font-size 0.75rem
+					line-height 16px
+					color $text
+					margin-bottom 10px
+				&-input
+					flex-basis 100%
+					background-color $white
+					overflow hidden
+					margin-bottom 15px
+					align-items center
+					width 100%
+					display flex
+					border-radius 8px
+					position relative
+					& i
+						position absolute
+						transition .3s
+						left 20px
+						padding-right 15px
+						color #e7e7e7
+						font-size 20px
+						border-right 1px solid #e7e7e7
+					& input
+						border 1px solid #e7e7e7
+						font-size 0.825rem
+						padding 7.5px 15px 7.5px 65px
+						border-radius 8px
+						overflow hidden
+						line-height 31px
+						color #b2b2b2
+						width 100%
+						transition .3s
+						&:focus
+							border-color $red
+						&:focus ~ i
+							color $red
+						&:hover
+							border-color $red
+						&:hover ~ i
+							color $red
+				&-button
+					flex-basis 100%
+					margin-bottom 10px
+					& button
+						background-color $red
+						padding 16px
+						text-transform uppercase
+						color $white
+						font-size 0.75rem
+						font-family $Bold
+						cursor pointer
+						line-height 16px
+						border-radius 8px
+						border none
+						width 100%
+						transition .3s
+						&:hover
+							box-shadow 0 0 4px $red
+				&-policy
+					flex-basis 100%
+					& span
+						font-family $Regular
+						font-size 0.5rem
+						line-height 12px
+						color #929292
+						& a
+							font-family $Regular
+							font-size 0.5rem
+							margin-left 3px
+							line-height 12px
+							color $red
+							text-shadow: 0px 3.4px #fcfcfc
+							border-bottom 1px solid $redborder
+							transition .3s
+							&:hover
+								color $text
+								border-color $text
+			&-populars
+				&-link
+					display flex
+					padding 15px 0
+					align-items center
+					flex-wrap wrap
+					color $red
+					font-family $Regular
+					font-size 0.825rem
+					line-height 21px
+					border-bottom 1px solid #E7E7E7
+					& > span:nth-child(1)
+						flex-basis 100%
+						margin-bottom 8px
+					& > span:nth-child(1) > span:nth-child(1)
+						transition .3s
+						text-shadow 0px 3px white
+						border-bottom 1px solid $redborder
+						line-height 18px
+					&:last-child
+						border-bottom none
+					&:hover > span:nth-child(1) > span:nth-child(1)
+						color $text
+						border-color $text
+					&-reviews
+						flex-basis 20%
+						font-size 0.75rem
+						color #909090
+						line-height 18px
+						& div
+							display inline-block
+						& i
+							margin-right 4px
+					&-comments
+						flex-basis 20%
+						font-size 0.625rem
+						color #909090
+						line-height 18px
+						& i
+							margin-right 4px
+						& div
+							display inline-block
+			&-callback
+				padding 25px 30px 0 30px
+				display flex
+				flex-wrap wrap
+				z-index 2
+				position relative
+				justify-content space-between
+				&-container
+					width 100%
+					&-title
+						color $white
+						font-size 0.75rem
+						font-family $SemiBold
+						line-height 16px
+						margin-bottom 10px
+					&-input
+						width 100%
+						display flex
+						margin-bottom 15px
+						position relative
+						align-items center
+						&:nth-child(4)
+							margin-bottom 25px
+						& i
+							position absolute
+							transition .3s
+							left 20px
+							padding-right 15px
+							color #e7e7e7
+							font-size 20px
+							border-right 1px solid #e7e7e7
+					& input
+						border 1px solid #e7e7e7
+						font-size 0.825rem
+						padding 7.5px 15px 7.5px 65px
+						border-radius 8px
+						overflow hidden
+						line-height 27px
+						color #b2b2b2
+						width 100%
+						transition .3s
+						&:focus
+							border-color $red
+						&:focus ~ i
+							color $red
+						&:hover
+							border-color $red
+						&:hover ~ i
+							color $red
+				&-button
+					width 100%
+					margin-bottom 15px
+					& button
+						background-color $text
+						padding 16px
+						text-transform uppercase
+						color $white
+						font-size 0.75rem
+						font-family $Bold
+						cursor pointer
+						line-height 16px
+						border-radius 8px
+						border none
+						width 100%
+						transition .3s
+						&:hover
+							box-shadow 0 0 4px $text
+				&-policy
+					display flex
+					align-items center
+					flex-basis 100%
+					margin-bottom 20px
+					& span
+						font-family $Regular
+						font-size 0.75rem
+						line-height 16px
+						color $white
+						margin-right 3px
+						& a
+							font-family $Regular
+							font-size 0.75rem
+							line-height 16px
+							display inline-block
+							color $white
+							display display block
+							text-shadow: 0px 3.6px #b12a2a
+							border-bottom 1px solid rgba(255, 255, 255, 0.2)
+							transition .3s
+							&:hover
+								color $text
+								border-color $text
+			&-footer
+				background rgba(0, 0, 0, 0.1)
+				display flex
+				align-items center
+				justify-content center
+				padding 10px 30px
+				& p
+					width 80%
+					color $white
+					text-align center
+					font-size 0.75rem
+					line-height 20px
+					font-family $Light
+@media(max-width: 1060px)
+	.blog
+		&__sidebar
+			margin-top 60px
+			flex-basis 100%
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			&-item
+				&:nth-child(1)
+					order 2
+					flex-basis 49%
+				&:nth-child(2)
+					order 1
+					flex-basis 49%
+				&:nth-child(3)
+					order 3
+					flex-basis 100%
+				&-callback
+					&-container
+						flex-basis 49%
+					&-button
+						flex-basis 49%
+					&-policy
+						flex-basis 49%
+@media(max-width: 991px)
+	.blog
+		&__sidebar
+			margin-top 41px
+@media(max-width: 768px)
+	.blog
+		&__sidebar
+			&-item
+				&:nth-child(1)
+					order 2
+					flex-basis 100%
+				&:nth-child(2)
+					order 1
+					flex-basis 100%
+				&:nth-child(3)
+					order 3
+					flex-basis 100%
+				&-callback
+					&-container
+						flex-basis 100%
+					&-button
+						flex-basis 100%
+					&-policy
+						flex-basis 100%
+				&-form
+					&-policy
+						& span
+							font-size 0.625rem
+							& a
+								font-size 0.625rem
+@media(max-width: 374px)
+	.blog__sidebar
+		&-item
+			&-callback
+				&-policy
+					& span
+						a
+							margin-left 0

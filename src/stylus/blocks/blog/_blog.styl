@@ -1,0 +1,212 @@
+#page-blog
+	.home__block-title-dynamic
+		margin-right 10px
+.blog
+	padding 50px 0
+	display flex
+	justify-content space-between
+	&__container
+		flex-basis 69%
+		&-tags
+			border-radius 8px
+			background-color #FCFCFC
+			border 1px solid #E7E7E7
+			padding 20px 20px 5px 20px
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			margin-bottom 30px
+			&-tag
+				border 1px solid $text
+				padding 14px
+				flex-basis 23%
+				text-align center
+				font-family $Bold
+				font-size 0.75rem
+				line-height 16px
+				color $text
+				border-radius 8px
+				margin-bottom 15px
+				transition color .3s, background-color .3s, border-color .3s
+				&:hover
+					color $white
+					background-color $red
+					border-color $red
+				&-active
+					color $white
+					background-color $red
+					border-color $red
+		&-items
+			display flex
+			flex-wrap wrap
+			.blog__item
+				flex-basis 100%
+				border-radius 8px
+				overflow hidden
+				display flex
+				margin-bottom 20px
+				&:hover .blog__item-image
+					transform scale(1.1)
+				&-image
+					overflow hidden
+					transition transform .3s
+					flex-basis 40%
+				&-container
+					flex-basis 60%
+					overflow hidden
+					z-index 1
+					border 1px solid #e7e7e7
+					border-radius 0 8px 8px 0
+					background-color $white
+					padding 26px 35px
+					display flex
+					flex-wrap wrap
+					&-more
+						background-color $red
+						padding 16px 93px
+						text-transform uppercase
+						color $white
+						font-size 0.75rem
+						font-family $Bold
+						cursor pointer
+						line-height 16px
+						border-radius 8px
+						transition .3s
+						margin 21px auto 0 auto
+						& i
+							transition .3s
+							margin-right 4px
+						&:hover i
+							transform rotate(180deg)
+						&:hover
+							box-shadow 0 0 4px $red
+					& i
+						color $red
+						font-size 16px
+						margin-right 5px
+					&-title
+						margin-bottom 10px
+						font-family $Regular
+						font-size 1.375rem
+						line-height 33px
+						color $black
+						flex-basis 100%
+						margin-bottom 10px
+						transition .3s
+						&:hover
+							color $red
+						& span
+							text-shadow 0px 3px $white
+							border-bottom 1px solid $redborder
+					&-author
+						margin-right 15px
+						margin-bottom 9px
+						& span
+							font-size 0.825rem
+							line-height 26px
+							color $text
+							font-family $Light
+					&-comment
+						margin-right 15px
+						& span
+							font-size 0.825rem
+							line-height 26px
+							color $text
+							font-family $Light
+					&-time
+						& span
+							font-size 0.825rem
+							line-height 26px
+							color #929292
+							font-family $Light
+					&-content
+						flex-basis 100%
+						margin-bottom 9px
+						p
+							color #232323
+							font-family $Light
+							font-size 0.825rem
+							line-height 26px
+					&-date
+						flex-basis calc(30% - 15px)
+						margin-right 15px
+						& span
+							font-size 0.825rem
+							line-height 26px
+							color #929292
+							font-family $Light
+					&-reviews
+						flex-basis calc(30% - 15px)
+						margin-right 15px
+						& span
+							font-size 0.825rem
+							line-height 26px
+							color #929292
+							font-family $Light
+					&-link
+						margin-top 3px
+						flex-basis 40%
+						text-align right
+						& a
+							font-size 0.75rem
+							line-height 16px
+							text-transform uppercase
+							color $red
+							font-family $Bold
+							padding-bottom 2px
+							transition .3s
+							border-bottom 1px solid $red
+							&:hover
+								color $text
+@media(max-width: 1060px)
+	.blog
+		padding 40px 0
+		flex-wrap wrap
+		&__container
+			flex-basis 100%
+			&-items
+				justify-content space-between
+				.blog__item
+					flex-basis 49%
+					flex-wrap wrap
+					&-image
+						height 300px
+						flex-basis 100%
+					&-container
+						justify-content space-between
+						flex-basis 100%
+						border-radius 0 0 8px 8px
+						&-title
+							order 1
+						&-author
+							order 2
+						&-comment
+							order 3
+						&-time
+							order 7
+						&-content
+							order 4
+						&-date
+							flex-basis auto
+							order 5
+						&-reviews
+							flex-basis auto
+							order 6
+						&-link
+							margin-top 17px
+							flex-basis auto
+							order 8
+							flex-basis 100%
+							text-align left
+@media(max-width: 768px)
+	.blog
+		&__container
+			&-tags
+				&-tag
+					flex-basis 48.5%
+			&-items
+				.blog__item
+					flex-basis 100%
+					&-container
+						&-comment
+							margin-right 0

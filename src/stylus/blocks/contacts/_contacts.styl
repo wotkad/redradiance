@@ -1,0 +1,283 @@
+#contacts
+	background-color #FCFCFC
+.contacts
+	padding 50px 0
+	display flex
+	justify-content space-between
+	&__map
+		height 340px
+	&__block
+		display flex
+		flex-wrap wrap
+		flex-basis 49%
+		&:nth-child(2)
+			border 1px solid #e7e7e7
+			background-color $white
+			border-radius 8px
+			padding 25px 30px
+		&-item
+			display flex
+			flex-wrap wrap
+			margin-bottom 23px
+			&:nth-child(1)
+				flex-basis 50%
+			&:nth-child(2)
+				flex-basis 50%
+			&:nth-child(3)
+				flex-basis 100%
+			&:nth-child(4)
+				flex-basis 100%
+			&:nth-child(5)
+				flex-basis 100%
+				border 1px solid #e7e7e7
+				background-color $white
+				border-radius 8px
+				padding 25px 30px
+				margin-bottom 0
+			&-title
+				flex-basis 100%
+				font-size 0.75rem
+				line-height 16px
+				font-family $SemiBold
+				color $text
+				margin-bottom 12px
+			&-text
+				flex-basis 100%
+				font-family $Regular
+				color $black
+				font-size 1rem
+				line-height 24px
+				& i
+					color $red
+					font-size 20px
+					margin-right 10px
+				& a
+					transition .3s
+					&:hover
+						color $red
+			&__form
+				display flex
+				justify-content space-between
+				&-input
+					flex-basis 49%
+					background-color $white
+					overflow hidden
+					align-items center
+					width 100%
+					display flex
+					border-radius 8px
+					position relative
+					& i
+						position absolute
+						transition .3s
+						left 20px
+						padding-right 15px
+						color #e7e7e7
+						font-size 20px
+						border-right 1px solid #e7e7e7
+					& input
+						border 1px solid #e7e7e7
+						font-size 0.825rem
+						padding 7.5px 15px 7.5px 65px
+						border-radius 8px
+						overflow hidden
+						line-height 31px
+						color #b2b2b2
+						width 100%
+						transition .3s
+						&:focus
+							border-color $red
+						&:focus ~ i
+							color $red
+						&:hover
+							border-color $red
+						&:hover ~ i
+							color $red
+				&-button
+					flex-basis 49%
+					& button
+						background-color $white
+						padding 14px 8px
+						text-transform uppercase
+						color $text
+						font-size 0.75rem
+						font-family $Bold
+						cursor pointer
+						line-height 16px
+						border-radius 8px
+						border 1px solid $text
+						width 100%
+						transition .3s
+						&:hover
+							box-shadow 0 0 4px $text
+		&-form
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			&-item
+				&:nth-child(1)
+					flex-basis 49%
+				&:nth-child(2)
+					flex-basis 49%
+				&:nth-child(3)
+					flex-basis 100%
+				&-title
+					flex-basis 100%
+					font-size 0.75rem
+					line-height 16px
+					font-family $SemiBold
+					color $text
+					margin-bottom 12px
+				&-input
+					background-color $white
+					overflow hidden
+					align-items center
+					width 100%
+					display flex
+					border-radius 8px
+					position relative
+					margin-bottom 15px
+					& i
+						position absolute
+						transition .3s
+						left 20px
+						padding-right 15px
+						color #e7e7e7
+						font-size 20px
+						border-right 1px solid #e7e7e7
+					& input
+						border 1px solid #e7e7e7
+						font-size 0.825rem
+						padding 7.5px 15px 7.5px 65px
+						border-radius 8px
+						overflow hidden
+						line-height 31px
+						color #b2b2b2
+						width 100%
+						transition .3s
+						&:focus
+							border-color $red
+						&:focus ~ i
+							color $red
+						&:hover
+							border-color $red
+						&:hover ~ i
+							color $red
+				&-textarea
+					flex-basis 100%
+					& textarea
+						resize none
+						border 1px solid #e7e7e7
+						font-size 0.825rem
+						padding 7.5px 15px
+						border-radius 8px
+						line-height 31px
+						color #b2b2b2
+						transition .3s
+						width 100%
+						margin-bottom 10px
+						&:focus
+							border-color $red
+						&:hover
+							border-color $red
+			&-button
+				flex-basis 49%
+				align-items center
+				display flex
+				& button
+					background-color $red
+					padding 16px
+					text-transform uppercase
+					color $white
+					font-size 0.75rem
+					font-family $Bold
+					cursor pointer
+					line-height 16px
+					border-radius 8px
+					border none
+					width 100%
+					transition .3s
+					&:hover
+						box-shadow 0 0 4px $red
+			&-policy
+				display flex
+				flex-basis 49%
+				align-items center
+				& span
+					font-family $Regular
+					font-size 0.5rem
+					line-height 12px
+					display inline-block
+					color #929292
+				& a
+					margin-left 3px
+					font-family $Regular
+					font-size 0.5rem
+					color $red
+					text-shadow: 0px 3.4px $white
+					border-bottom 1px solid rgba(255, 255, 255, 0.2)
+					transition .3s
+					&:hover
+						color $text
+						border-color $text
+@media(max-width: 1012px)
+	.contacts
+		padding 40px 0
+		flex-wrap wrap
+		&__block
+			&:nth-child(1)
+				margin-bottom 20px
+			&:nth-child(1),
+			&:nth-child(2)
+				flex-basis 100%
+			&-item
+				&:nth-child(1),
+				&:nth-child(2)
+					flex-basis 30%
+				&:nth-child(1)
+					order 1
+				&:nth-child(2)
+					order 2
+				&:nth-child(3)
+					order 4
+					order 100%
+				&:nth-child(4)
+					flex-basis 30%
+					order 3
+				&:nth-child(5)
+					order 5
+				&__form
+					flex-basis 100%
+@media(max-width: 768px)
+	.contacts
+		&__block
+			&-item
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					flex-basis 100%
+				&__form
+					flex-wrap wrap
+					&-input
+						flex-basis 100%
+						margin-bottom 15px
+					&-button
+						flex-basis 100%
+			&-form
+				&-item
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3)
+						flex-basis 100%
+				&-button
+					flex-basis 100%
+					margin-bottom 15px
+				&-policy
+					flex-basis 100%
+					& span
+						font-size 0.75rem
+						line-height 14px
+						& a
+							font-size 0.75rem
+

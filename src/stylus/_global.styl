@@ -1,0 +1,277 @@
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	outline: none
+	text-decoration none
+	box-shadow none
+
+a
+	text-decoration none
+	color $black
+
+html,
+body
+	height 100%
+	background-color $white
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea::-moz-placeholder,
+input::-moz-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea:-moz-placeholder,
+input:-moz-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder
+	font-family $Light
+	font-weight 100
+
+.render
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index 999
+
+.container
+	border-top 1px solid #E7E7E7
+
+.g-wrapper
+	max-width 1170px
+	margin 0 auto
+	padding 0 15px
+
+section
+	position relative
+
+.rotated
+	transform rotate(180deg)
+	color $red
+
+.ymap-container
+	position relative
+	overflow hidden
+	cursor pointer
+	background url('/images/contacts-map.jpg') #ffffff no-repeat
+	background-position center center
+	background-size cover
+
+#map-yandex
+	position relative
+	width 100%
+	height 340px
+	cursor pointer
+	background-color transparent
+
+.loader
+	position absolute
+	z-index 15
+	top -100%
+	left 0
+	box-sizing border-box
+	width 100%
+	height 100%
+	overflow hidden
+	color #000000
+	transition opacity .7s ease
+	opacity 0
+	background-color rgba(0,0,0,.55)
+
+.loader:after,
+.loader:before
+	box-sizing border-box
+
+.loader.is-active
+	top 0
+	opacity 1
+
+.loader-default:after
+	position absolute
+	top calc(50% - 24px)
+	left calc(50% - 24px)
+	width 48px
+	height 48px
+	content ''
+	animation rotation 1s linear infinite
+	border solid 8px #ffffff
+	border-left-color transparent
+	border-radius 50%
+
+@keyframes rotation
+	from
+		transform rotate(0)
+	to
+		transform rotate(359deg)
+@keyframes blink
+	from
+		opacity .5
+	to
+		opacity 1
+
+.content
+	padding-top 50px
+	flex-basis 69%
+	overflow hidden
+	& ul
+		padding 10px 20px 0 20px
+		& li
+			color $red
+			font-family $Bold
+			line-height 24px
+			font-size 0.825rem
+			margin 0 0 15px 20px
+			& span
+				display block
+				margin 0 0 15px 20px
+				font-family $Regular
+				color #232323
+				line-height 24px
+				font-size 0.825rem
+	& ol
+		padding 10px 20px 20px 20px
+		& li
+			color $red
+			font-family $Bold
+			line-height 24px
+			font-size 0.825rem
+			margin 0 0 15px 20px
+			& ul
+				padding-top 15px
+				& li
+					list-style-type none
+					margin-bottom 5px
+					display flex
+					&:nth-child(1)
+						&:before
+							content 'a.'
+					&:nth-child(2)
+						&:before
+							content 'b.'
+					&:nth-child(3)
+						&:before
+							content 'c.'
+					&:nth-child(4)
+						&:before
+							content 'd.'
+					&:nth-child(5)
+						&:before
+							content 'e.'
+					&:nth-child(6)
+						&:before
+							content 'f.'
+			& span
+				display block
+				margin 0 0 15px 20px
+				font-family $Regular
+				color #232323
+				line-height 24px
+				font-size 0.825rem
+			&:last-child
+				margin-bottom 0
+			&:last-child span
+				margin-bottom 0
+	& h2
+		margin-bottom 30px
+		font-family $Regular
+		font-size 1.375rem
+		line-height 33px
+		color $black
+		font-weight 400
+	& h3
+		font-family $Regular
+		font-size 1.125rem
+		line-height 27px
+		color $black
+		font-weight 400
+		margin-bottom 15px
+	& p
+		font-size 0.825rem
+		line-height 23px
+		color #232323
+		font-family $Regular
+		margin-bottom 20px
+	& hr
+		width 80px
+		color $red
+		margin-bottom 20px
+	& strong
+		font-weight 400
+		font-size 0.75rem
+		line-height 20px
+		font-family $SemiBold
+		color $text
+	& img
+		border 1px solid #e7e7e7
+		padding 30px
+		border-radius 8px
+		width 100%
+		margin-bottom 30px
+	& blockquote
+		border-radius 8px
+		background-color #fcfcfc
+		border 1px solid #e7e7e7
+		padding 30px 50px
+		font-family $Light
+		line-height 26px
+		font-size 0.825rem
+		position relative
+		margin-bottom 30px
+		color #232323
+		position relative
+		&:before
+			content '\f10e'
+			position absolute
+			display inline-block
+			font-family FontAwesome
+			text-rendering auto
+			-webkit-font-smoothing antialiased
+			-moz-osx-font-smoothing grayscale
+			left 15px
+			top 15px
+			color rgba(213, 63, 63, 0.1)
+			font-size 28px
+
+.stylesX
+	opacity 1 !important
+	transform translateX(0) !important
+
+.stylesY
+	opacity 1 !important
+	transform translateY(0) !important
+
+@media (max-width: 991px)
+	html
+		font-size 14px
+
+@media (max-width: 991px)
+	.g-wrapper
+		width 100%
+		padding 0 40px
+
+@media (max-width: 768px)
+	.g-wrapper
+		padding 0 20px
+	.content ol
+		padding 0
+	.content ul
+		padding 10px 0 0 0
+
+@media(max-width: 414px)
+	input[type='text'],
+	input[type='password'],
+	input[type='email'],
+	textarea
+		font-size 16px
